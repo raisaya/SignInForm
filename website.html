@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Welcome Back</title>
+
+<style>
+/* ================== RESET ================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================== THEME ================== */
+:root {
+    --bg: #020617;
+    --card: rgba(255, 255, 255, 0.07);
+    --border: rgba(255, 255, 255, 0.12);
+    --text: #f8fafc;
+    --muted: #94a3b8;
+    --accent: #38bdf8;
+}
+
+/* ================== PAGE ================== */
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:
+        radial-gradient(circle at top left, #0f172a, transparent 40%),
+        radial-gradient(circle at bottom right, #020617, transparent 40%),
+        #020617;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--text);
+}
+
+/* ================== CARD ================== */
+.card {
+    width: 100%;
+    max-width: 420px;
+    padding: 3rem 2.5rem;
+    background: var(--card);
+    backdrop-filter: blur(24px);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+}
+
+/* ================== HEADER ================== */
+.header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.header h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.header p {
+    margin-top: 0.6rem;
+    font-size: 0.95rem;
+    color: var(--muted);
+}
+
+/* ================== FORM ================== */
+.field {
+    margin-bottom: 1.6rem;
+}
+
+input {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    color: var(--text);
+    font-size: 0.95rem;
+    outline: none;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+input::placeholder {
+    color: #64748b;
+}
+
+input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.15);
+}
+
+/* ================== OPTIONS ================== */
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+    margin-bottom: 2rem;
+    color: var(--muted);
+}
+
+.options a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.options a:hover {
+    text-decoration: underline;
+}
+
+/* ================== BUTTON ================== */
+button {
+    width: 100%;
+    padding: 0.95rem;
+    background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+    border: none;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #020617;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(56, 189, 248, 0.45);
+}
+
+/* ================== FOOTER ================== */
+.footer {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.85rem;
+    color: var(--muted);
+}
+
+.footer a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* ================== RESPONSIVE ================== */
+@media (max-width: 450px) {
+    .card {
+        padding: 2.5rem 2rem;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <div class="header">
+        <h1>Welcome Back</h1>
+        <p>Please sign in to your account</p>
+    </div>
+
+    <form>
+        <div class="field">
+            <input type="email" placeholder="Email address" required />
+        </div>
+
+        <div class="field">
+            <input type="password" placeholder="Password" required />
+        </div>
+
+        <div class="options">
+            <label>
+                <input type="checkbox" /> Remember me
+            </label>
+            <a href="#">Forgot password?</a>
+        </div>
+
+        <button type="submit">Sign In</button>
+    </form>
+
+    <div class="footer">
+        Don’t have an account? <a href="#">Sign up</a>
+    </div>
+</div>
+
+</body>
+</html>
